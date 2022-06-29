@@ -1,47 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
-<head>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
-    
-  <style>
-    body{
-      height: 100vh;
-    background: rgb(13,32,90);
-    background: linear-gradient(135deg, rgba(13,32,90,1) 0%, rgba(58,97,223,1) 100%);
-}
-  </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        height: 100vh;
+        background: rgb(13, 32, 90);
+        background: linear-gradient(
+          135deg,
+          rgba(13, 32, 90, 1) 0%,
+          rgba(58, 97, 223, 1) 100%
+        );
+      }
+    </style>
   </head>
-<body>
-    <div class='container mt-5'>
-            {% for x in result: %}
-        <div class="card-deck mt-2" data-aos="fade-left" data-aos-once="true" data-aos-delay="{{ loop.index * 250 }}">
-            <div class="card">
-                <div class="card-body">
-                        <p class="card-text">{{ x |safe }}</p>
-                </div>
-            </div>
+  <body>
+    <div class="container mt-5">
+      {% for x in result: %}
+      <div
+        class="card-deck mt-2"
+        data-aos="fade-left"
+        data-aos-once="true"
+        data-aos-delay="{{ loop.index * 250 }}"
+      >
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">{{ x |safe }}</p>
+          </div>
         </div>
-        {% endfor %}
+      </div>
+      {% endfor %}
     </div>
 
-    <div class="text-center"> 
+    <div class="text-center">
       <form>
-        <button type="button" onclick='history.back()' class="btn-lg btn-dark mt-5 text-center">Go Back!</button>
+        <button
+          type="button"
+          onclick="history.back()"
+          class="btn-lg btn-dark mt-5 text-center"
+        >
+          Go Back!
+        </button>
       </form>
-        <p class="mt-5 mb-3 text-muted">Project by Omer Waseem</p>
+      <p class="mt-5 mb-3 text-muted">Project by Omer Waseem</p>
     </div>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
     <script>
-        AOS.init();
+      AOS.init();
     </script>
   </body>
 </html>
